@@ -8,14 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
     <style>
-        body { 
-            font-family: 'Segoe UI', system-ui, sans-serif; 
-        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; }
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
                         url('https://source.unsplash.com/random/1920x1080/?music,neon') center/cover no-repeat;
         }
-        
         .glow-btn {
             transition: all 0.4s ease;
             box-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e;
@@ -24,20 +21,7 @@
             box-shadow: 0 0 30px #22c55e, 0 0 60px #22c55e;
             transform: translateY(-3px);
         }
-
-        .glow-green {
-            box-shadow: 0 0 25px #22c55e, 0 0 50px #22c55e;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Impact', 'Arial Black', sans-serif;
-            letter-spacing: -2px;
-        }
-
-        .mod-item:hover { 
-            background-color: #27272a; 
-            transform: translateY(-4px);
-        }
+        h1, h2, h3 { font-family: 'Impact', 'Arial Black', sans-serif; letter-spacing: -2px; }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -48,11 +32,11 @@
             <div class="flex items-center gap-3">
                 <span class="font-black text-4xl tracking-tighter">BOFFINTK</span>
             </div>
-            
             <div class="hidden md:flex items-center gap-8 text-lg font-medium">
                 <a href="#inicio" class="hover:text-green-400 transition">Inicio</a>
                 <a href="#elegir" class="hover:text-green-400 transition">Elegir Mod</a>
                 <a href="#mixes" class="hover:text-green-400 transition">Mixes</a>
+                <a href="#comentarios" class="hover:text-green-400 transition">Comentarios</a>
                 <button onclick="showCredits()" class="hover:text-green-400 transition">Credits</button>
                 <a href="https://discord.gg/TuPycP9N" target="_blank" class="text-3xl hover:text-indigo-400 transition">
                     <i class="fab fa-discord"></i>
@@ -69,9 +53,8 @@
                 <span class="text-green-400">DE BOFFINTK</span>
             </h1>
             <p class="text-2xl md:text-3xl text-green-300 mb-12 font-light">Los mejores mods de Friday Night Funkin'</p>
-            
             <button onclick="document.getElementById('elegir').scrollIntoView({ behavior: 'smooth' })" 
-                    class="glow-btn bg-green-500 hover:bg-green-600 text-black font-bold text-2xl px-14 py-7 rounded-3xl transition-all active:scale-95">
+                    class="glow-btn bg-green-500 hover:bg-green-600 text-black font-bold text-2xl px-14 py-7 rounded-3xl">
                 ELEGIR MOD
             </button>
         </div>
@@ -82,19 +65,13 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
                 <h2 class="text-5xl font-black tracking-tighter">Elegir Mod</h2>
-                
                 <div class="relative w-full md:w-96">
-                    <input id="searchInput" 
-                           type="text" 
-                           placeholder="Buscar mod... (ej: garcello, indie cross)"
+                    <input id="searchInput" type="text" placeholder="Buscar mod..." 
                            class="w-full bg-zinc-800 border border-zinc-700 rounded-3xl py-5 px-6 pl-12 focus:outline-none focus:border-green-500 text-lg">
-                    <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-zinc-500 text-xl"></i>
+                    <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-zinc-500"></i>
                 </div>
             </div>
-
-            <div id="mods-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Generado con JavaScript -->
-            </div>
+            <div id="mods-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
     </section>
 
@@ -102,53 +79,57 @@
     <section id="mixes" class="py-24 bg-black">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-5xl font-black text-center mb-16 tracking-tighter">Mixes</h2>
-            
             <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <a href="https://gamebanana.com/mods/615366" target="_blank" class="mix-card block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
+                <a href="https://gamebanana.com/mods/615366" target="_blank" class="block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
                     <h3 class="text-3xl font-bold mb-2">Darnell's Mixtape</h3>
-                    <p class="text-green-400">Gran variedad de mixes</p>
                 </a>
-
-                <a href="https://gamebanana.com/mods/602414" target="_blank" class="mix-card block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
+                <a href="https://gamebanana.com/mods/602414" target="_blank" class="block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
                     <h3 class="text-3xl font-bold mb-2">Sky Mixes</h3>
-                    <p class="text-green-400">Sky: Reborn</p>
                 </a>
-
-                <a href="https://gamebanana.com/mods/661165" target="_blank" class="mix-card block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
+                <a href="https://gamebanana.com/mods/661165" target="_blank" class="block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
                     <h3 class="text-3xl font-bold mb-2">2Hot Sky Mix</h3>
-                    <p class="text-green-400">Remix especial</p>
                 </a>
-
-                <a href="https://gamebanana.com/mods/553809" target="_blank" class="mix-card block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
+                <a href="https://gamebanana.com/mods/553809" target="_blank" class="block bg-zinc-900 rounded-3xl p-8 text-center glow-green hover:bg-zinc-800 transition-all">
                     <h3 class="text-3xl font-bold mb-2">Girlfriend Mixes</h3>
-                    <p class="text-green-400">GF al frente</p>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- COMENTARIOS PÚBLICOS -->
+    <section id="comentarios" class="py-24 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-12 tracking-tighter">Comentarios Públicos</h2>
+            <p class="text-center text-green-400 mb-10">Deja tu mensaje, recomendación o saludo</p>
+
+            <div class="bg-zinc-800 rounded-3xl p-8 mb-12">
+                <input id="nombre" type="text" placeholder="Tu nombre o usuario" 
+                       class="w-full bg-zinc-700 rounded-2xl px-6 py-4 mb-4 focus:outline-none">
+                <textarea id="mensaje" rows="4" placeholder="Escribe tu comentario aquí..." 
+                          class="w-full bg-zinc-700 rounded-3xl px-6 py-4 focus:outline-none"></textarea>
+                <button onclick="agregarComentario()" 
+                        class="glow-btn mt-6 w-full bg-green-500 hover:bg-green-600 text-black font-bold py-5 rounded-3xl">
+                    PUBLICAR COMENTARIO
+                </button>
+            </div>
+
+            <div id="lista-comentarios" class="space-y-6"></div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="bg-black py-12 text-center">
-        <div class="flex justify-center gap-8 text-3xl mb-6">
-            <a href="https://discord.gg/TuPycP9N" target="_blank" class="hover:text-indigo-400 transition">
-                <i class="fab fa-discord"></i>
-            </a>
-        </div>
-        <button onclick="showCredits()" 
-                class="glow-btn bg-green-500 hover:bg-green-600 text-black px-10 py-5 rounded-3xl font-bold text-lg">
+        <button onclick="showCredits()" class="glow-btn bg-green-500 hover:bg-green-600 text-black px-10 py-5 rounded-3xl font-bold text-lg">
             Credits
         </button>
     </footer>
 
-    <!-- MODAL CREDITS -->
+    <!-- Credits Modal -->
     <div id="credits-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
         <div class="bg-zinc-900 rounded-3xl p-10 max-w-md text-center">
             <h3 class="text-3xl font-bold mb-6">Credits</h3>
             <p class="text-2xl mb-8">Creator: <span class="text-green-400 font-bold">Boffin</span></p>
-            <button onclick="hideCredits()" 
-                    class="glow-btn bg-green-500 text-black px-10 py-4 rounded-3xl font-bold">
-                Cerrar
-            </button>
+            <button onclick="hideCredits()" class="glow-btn bg-green-500 text-black px-10 py-4 rounded-3xl font-bold">Cerrar</button>
         </div>
     </div>
 
@@ -162,8 +143,8 @@
             { name: "VS Tricky", link: "https://gamebanana.com/mods/44334" },
             { name: "QT Rewired", link: "https://gamebanana.com/mods/566597" },
             { name: "VS Tabi", link: "https://gamebanana.com/mods/286388" },
-            { name: "VS Whitty", link: "https://gamebanana.com/mods/2682" },
-            { name: "VS Shaggy", link: "https://gamebanana.com/mods/2860" },
+            { name: "VS Whitty", link: "https://gamebanana.com/mods/download/44214#FileInfo_578507" },
+            { name: "VS Shaggy", link: "https://gamebanana.com/mods/284121" },
             { name: "VS Among Us", link: "https://gamebanana.com/mods/55652" },
             { name: "VS Huggy Wuggy 2026", link: "https://gamebanana.com/mods/670164" },
             { name: "VS Sky", link: "https://gamebanana.com/mods/44555" },
@@ -182,8 +163,7 @@
                 div.className = 'bg-zinc-800 rounded-3xl p-6 mod-item cursor-pointer transition';
                 div.innerHTML = `
                     <h3 class="text-2xl font-bold mb-6">${mod.name}</h3>
-                    <a href="${mod.link}" target="_blank" 
-                       class="glow-btn block bg-green-500 hover:bg-green-600 text-black text-center py-5 rounded-3xl font-bold text-lg transition-all">
+                    <a href="${mod.link}" target="_blank" class="glow-btn block bg-green-500 hover:bg-green-600 text-black text-center py-5 rounded-3xl font-bold text-lg">
                         DESCARGAR
                     </a>
                 `;
@@ -199,10 +179,50 @@
 
         renderMods(mods);
 
+        // Comentarios
+        function cargarComentarios() {
+            const lista = document.getElementById('lista-comentarios');
+            lista.innerHTML = '';
+            const comentarios = JSON.parse(localStorage.getItem('comentariosBoffinTK')) || [];
+            
+            comentarios.forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'bg-zinc-800 rounded-3xl p-6';
+                div.innerHTML = `
+                    <div class="flex justify-between">
+                        <span class="font-bold text-green-400">${c.nombre}</span>
+                        <span class="text-xs text-zinc-500">${c.fecha}</span>
+                    </div>
+                    <p class="mt-3 text-zinc-300">${c.mensaje}</p>
+                `;
+                lista.appendChild(div);
+            });
+        }
+
+        function agregarComentario() {
+            const nombre = document.getElementById('nombre').value.trim() || "Anónimo";
+            const mensaje = document.getElementById('mensaje').value.trim();
+            
+            if (!mensaje) return alert("Por favor escribe un mensaje");
+
+            const comentarios = JSON.parse(localStorage.getItem('comentariosBoffinTK')) || [];
+            comentarios.unshift({
+                nombre: nombre,
+                mensaje: mensaje,
+                fecha: new Date().toLocaleDateString('es-ES')
+            });
+
+            localStorage.setItem('comentariosBoffinTK', JSON.stringify(comentarios));
+            document.getElementById('nombre').value = '';
+            document.getElementById('mensaje').value = '';
+            cargarComentarios();
+        }
+
+        window.onload = cargarComentarios;
+
         function showCredits() {
             document.getElementById('credits-modal').classList.remove('hidden');
         }
-        
         function hideCredits() {
             document.getElementById('credits-modal').classList.add('hidden');
         }
